@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-white: #FFFFFF;
+  --color-brand-black: #000000;
+  --color-brand-red: #C8102E;
+  --color-brand-red-dim: #9E0C22;
+  --color-brand-red-light: #FFF0F2;
+  --color-brand-gray-50: #FAFAFA;
+  --color-brand-gray-100: #F5F5F5;
+  --color-brand-gray-200: #EBEBEB;
+  --color-brand-gray-300: #E0E0E0;
+  --color-brand-gray-500: #999999;
+  --color-brand-gray-700: #555555;
+  --color-brand-gray-800: #333333;
+
+  --font-display: var(--font-bebas-neue), sans-serif;
+  --font-body: var(--font-dm-sans), sans-serif;
+  --font-mono: var(--font-space-mono), monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Remove scrollbar from horizontal scroll containers */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@layer components {
+  /* ── Layout ── */
+  :root {
+    --container-padding: 20px;
+  }
+  @media (min-width: 640px) { :root { --container-padding: 24px; } }
+  @media (min-width: 768px) { :root { --container-padding: 40px; } }
+  @media (min-width: 1024px) { :root { --container-padding: 64px; } }
+
+  .container-site {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+  }
+
+  .carousel-padding {
+    padding-left: calc(max(50% - 640px, 0px) + var(--container-padding)) !important;
+    padding-right: var(--container-padding) !important;
+  }
+
+  /* ── Section Spacing ── */
+  .section-padding {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+  }
+
+  /* ── Typography ── */
+  .label-mono {
+    font-family: var(--font-space-mono), monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #666666;
+  }
+
+  .label-mono-red {
+    font-family: var(--font-space-mono), monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #C8102E;
+  }
+
+  .section-heading {
+    font-family: var(--font-display);
+    line-height: 0.9;
+    color: #1A1A1A;
+  }
+
+  /* ── Buttons ── */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+    background-color: #C8102E;
+    padding: 12px 28px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-primary:hover {
+    background-color: #9E0C22;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(200, 16, 46, 0.3);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    color: #1A1A1A;
+    background-color: transparent;
+    padding: 12px 28px;
+    border-radius: 8px;
+    border: 1.5px solid #E0E0E0;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .btn-secondary:hover {
+    border-color: #C8102E;
+    color: #C8102E;
+    background-color: #FFF0F2;
+  }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 600;
+    color: #C8102E;
+    background: none;
+    border: none;
+    padding: 8px 0;
+    cursor: pointer;
+    transition: gap 0.2s ease;
+  }
+  .btn-ghost:hover {
+    gap: 10px;
+  }
+
+  /* ── Cards ── */
+  .card {
+    background: #FFFFFF;
+    border: 1px solid #EBEBEB;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+    border-color: #C8102E;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+
+  /* ── Dot Grid Background ── */
+  .bg-dot-grid {
+    background-color: #FAFAFA;
+    background-image: radial-gradient(circle, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
