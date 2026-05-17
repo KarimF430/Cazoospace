@@ -27,14 +27,10 @@ export default function SectionBookBriefing() {
                 </div>
               </div>
               {/* Floating badge */}
-              <motion.div
-                animate={{ y: [0, -6, 0] }}
-                transition={{ duration: 3, ease: "easeInOut", repeat: Infinity }}
-                className="absolute -bottom-2 -right-2 md:bottom-2 md:right-0 bg-white text-[#C8102E] px-4 py-2.5 rounded-xl shadow-lg"
-              >
+              <div className="absolute -bottom-2 -right-2 md:bottom-2 md:right-0 bg-white text-[#C8102E] px-4 py-2.5 rounded-xl shadow-lg animate-float">
                 <span className="font-body text-[12px] font-bold block">Book Now</span>
                 <span className="font-body text-[10px] text-[#C8102E]/60 block">No commitment</span>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
 

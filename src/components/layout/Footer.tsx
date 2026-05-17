@@ -42,7 +42,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1A1A1A] text-white pt-16 md:pt-20 pb-8">
+    <footer className="bg-[#1A1A1A] text-white pt-16 md:pt-20 pb-8" role="contentinfo">
       <div className="container-site">
         {/* Top: Logo + Socials */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-12 md:mb-16 pb-8 border-b border-white/10">
@@ -59,6 +59,8 @@ export default function Footer() {
                 key={social.label}
                 href="#"
                 aria-label={social.label}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center w-10 h-10 rounded-full border border-white/15 text-white/60 hover:text-white hover:border-white/40 hover:bg-white/5 transition-all duration-200"
               >
                 {social.icon}

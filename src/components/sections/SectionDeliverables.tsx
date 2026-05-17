@@ -93,7 +93,7 @@ export default function SectionDeliverables() {
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.06 }}
+              transition={{ duration: 0.25, delay: i * 0.03 }}
               className="group bg-[#FAFAFA] rounded-2xl p-6 md:p-7 border border-transparent transition-all duration-300 hover:bg-white hover:border-[#E0E0E0] hover:shadow-lg hover:-translate-y-1"
             >
               {/* Icon */}

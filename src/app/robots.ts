@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: "https://nexusagency.com/sitemap.xml",
-    host: "https://nexusagency.com",
+    sitemap: "https://cazoospace.com/sitemap.xml",
+    host: "https://cazoospace.com",
   };
 }

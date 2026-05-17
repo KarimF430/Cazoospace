@@ -43,7 +43,7 @@ export default function ProcessSection() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
+              transition={{ duration: 0.25, delay: i * 0.05 }}
               className="relative z-10 text-center"
             >
               {/* Step number circle */}

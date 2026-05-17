@@ -29,7 +29,7 @@ export async function generateMetadata({
       images: [`/og/solutions-${slug}.jpg`],
     },
     alternates: {
-      canonical: `https://nexusagency.com/solutions/${slug}`,
+      canonical: `https://cazoospace.com/solutions/${slug}`,
     },
   };
 }
@@ -56,12 +56,12 @@ export default async function SolutionPage({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            name: `NEXUS — ${solution.industry}`,
+            name: `Cazoo Space — ${solution.industry}`,
             description: solution.metaDescription,
             provider: {
               "@type": "Organization",
-              name: "NEXUS Agency",
-              url: "https://nexusagency.com",
+              name: "Cazoo Space",
+              url: "https://cazoospace.com",
             },
             serviceType: solution.industry,
             areaServed: { "@type": "Country", name: "United States" },

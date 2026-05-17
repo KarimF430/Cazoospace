@@ -17,7 +17,7 @@ export default function PalantirWhoWeServe() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.25, ease: "easeOut" }}
           className="mb-16"
         >
           <p className="label-mono-red mb-4">// 003 — CLIENTS</p>
@@ -33,7 +33,7 @@ export default function PalantirWhoWeServe() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.5, ease: "easeOut", delay: i * 0.1 }}
+              transition={{ duration: 0.25, ease: "easeOut", delay: i * 0.05 }}
               className="group white-row px-4 py-8 md:px-8 flex flex-col md:flex-row md:items-center justify-between gap-4 md:gap-12 cursor-default"
             >
               {/* Type */}

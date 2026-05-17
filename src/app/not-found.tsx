@@ -1,6 +1,16 @@
 import Link from "next/link";
 import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Page Not Found | Cazoo Space",
+  description: "The page you are looking for does not exist.",
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 export default function NotFound() {
   return (

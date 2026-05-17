@@ -18,7 +18,7 @@ export default function PalantirCaseStudies() {
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.25, ease: "easeOut" }}
           className="text-center mb-10 md:mb-14"
         >
           <span className="inline-flex items-center gap-3 py-1.5 px-4 rounded-full bg-white/5 border border-white/10 text-[#C8102E] font-mono text-[10px] tracking-[0.2em] font-bold uppercase mb-6 shadow-sm mx-auto">
@@ -37,7 +37,7 @@ export default function PalantirCaseStudies() {
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.1 }}
-              transition={{ duration: 0.4, ease: "easeOut", delay: i * 0.05 }}
+              transition={{ duration: 0.25, ease: "easeOut", delay: i * 0.03 }}
             >
               <Link
                 href={`/work/${work.slug}`}

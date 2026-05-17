@@ -98,8 +98,8 @@ export default function AboutPage() {
                   src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80" 
                   alt="Meaningful Human Connections"
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
-                  unoptimized
                 />
               </div>
 

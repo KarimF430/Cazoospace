@@ -5,24 +5,19 @@ import { motion } from "framer-motion";
 export default function PalantirCallout() {
   return (
     <section className="relative py-16 md:py-20 overflow-hidden bg-[#0A0A0A]">
-      {/* Subtle textured background */}
-      <div className="absolute inset-0 opacity-[0.02] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]" />
+      {/* Subtle textured background — inline pattern instead of external URL */}
+      <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px)', backgroundSize: '4px 4px' }} />
       
       {/* Massive decorative accent */}
-      <motion.div
-        animate={{ opacity: [0.02, 0.04, 0.02] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none z-0"
-      >
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none z-0 animate-pulse-slow">
         <div className="w-full h-full bg-[radial-gradient(circle_at_center,_#C8102E_0%,_transparent_60%)] blur-[100px]" />
-      </motion.div>
+      </div>
 
       <div className="container-site relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
         >
           <h2 className="font-display text-white leading-[0.9] mb-6 tracking-tight" style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}>
             WE SHOW UP<br />

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { LayoutGrid, TrendingUp } from "lucide-react";
+import Image from "next/image";
 export default function AboutSection() {
   const executionCards = [
     {
@@ -28,7 +29,7 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.3 }}
             >
               <span className="inline-flex items-center gap-3 py-1.5 px-4 rounded-full bg-white border border-black/5 text-[#C8102E] font-mono text-[10px] tracking-[0.2em] font-bold uppercase mb-6 shadow-sm">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C8102E] animate-pulse" />
@@ -60,11 +61,13 @@ export default function AboutSection() {
                       }
                     }}
                   >
-                    <img
+                    <Image
                       src="/logo-1.png"
                       alt="Brand Icon"
+                      width={450}
+                      height={112}
                       className="h-full w-auto"
-                      style={{ clipPath: 'inset(0 69% 0 0)' }} // Small overlap to hide seam
+                      style={{ clipPath: 'inset(0 69% 0 0)' }}
                     />
                   </motion.div>
 
@@ -79,9 +82,11 @@ export default function AboutSection() {
                       }
                     }}
                   >
-                    <img
+                    <Image
                       src="/logo-1.png"
                       alt="Brand Text"
+                      width={450}
+                      height={112}
                       className="h-full w-auto"
                       style={{ clipPath: 'inset(0 0 32% 30%)' }}
                     />
@@ -98,11 +103,13 @@ export default function AboutSection() {
                       }
                     }}
                   >
-                    <img
+                    <Image
                       src="/logo-1.png"
                       alt="Brand Subtext"
+                      width={450}
+                      height={112}
                       className="h-full w-auto"
-                      style={{ clipPath: 'inset(67% 0 0 30%)' }} // Small overlap with the text above
+                      style={{ clipPath: 'inset(67% 0 0 30%)' }}
                     />
                   </motion.div>
 
@@ -126,7 +133,7 @@ export default function AboutSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
+                transition={{ duration: 0.3, delay: 0.05 }}
               >
                 <h3 className="font-mono text-[12px] text-[#C8102E] tracking-[0.15em] font-semibold uppercase mb-4 flex items-center gap-3">
                   <span className="w-6 h-[1px] bg-[#C8102E]" /> Vision
@@ -140,7 +147,7 @@ export default function AboutSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.3, delay: 0.1 }}
               >
                 <h3 className="font-mono text-[12px] text-[#C8102E] tracking-[0.15em] font-semibold uppercase mb-4 flex items-center gap-3">
                   <span className="w-6 h-[1px] bg-[#C8102E]" /> Mission
@@ -158,7 +165,7 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.3, delay: 0.15 }}
               className="mb-14"
             >
               <h3 className="font-mono text-[12px] text-[#C8102E] tracking-[0.15em] font-semibold uppercase mb-4 flex items-center gap-3">
@@ -179,7 +186,7 @@ export default function AboutSection() {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.4 + (i * 0.1) }}
+                  transition={{ duration: 0.25, delay: 0.2 + (i * 0.05) }}
                   className="p-6 md:p-8 rounded-3xl bg-[#FAFAFA] border border-black/5 hover:border-[#C8102E]/20 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
                 >
                   <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center text-[#C8102E] mb-5 group-hover:bg-[#C8102E] group-hover:text-white transition-colors">

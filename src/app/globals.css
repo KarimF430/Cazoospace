@@ -39,6 +39,31 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  /* Screen-reader only utility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  /* Reduced motion: respect user preferences for accessibility & performance */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }
 
 @layer components {
@@ -75,6 +100,12 @@
       padding-top: 64px;
       padding-bottom: 64px;
     }
+  }
+
+  /* ── Content Visibility: skip rendering of off-screen sections for speed ── */
+  .section-lazy {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 600px;
   }
 
   /* ── Typography ── */
@@ -184,5 +215,22 @@
     background-color: #FAFAFA;
     background-image: radial-gradient(circle, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
     background-size: 24px 24px;
+  }
+
+  /* ── CSS Animations (Off Main Thread) ── */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-slow {
+    0%, 100% { opacity: 0.02; }
+    50% { opacity: 0.04; }
+  }
+  .animate-pulse-slow {
+    animation: pulse-slow 8s ease-in-out infinite;
   }
 }

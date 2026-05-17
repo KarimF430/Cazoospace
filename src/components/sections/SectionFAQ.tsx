@@ -48,6 +48,24 @@ export default function SectionFAQ() {
 
   return (
     <section className="py-16 md:py-24 bg-[#F9F9F9]">
+      {/* FAQPage JSON-LD for Google rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
       <div className="container-site max-w-4xl mx-auto px-4 md:px-0">
         
         <div className="text-center mb-12 md:mb-16">
@@ -86,7 +104,7 @@ export default function SectionFAQ() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      transition={{ duration: 0.2, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
                       <div className="p-5 md:p-6 pt-0 font-body text-[14px] md:text-[15px] text-[#555555] leading-relaxed">

@@ -15,7 +15,7 @@ export default function CTASection() {
           initial={{ opacity: 0, scale: 0.98, y: 15 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
         >
           <h2 className="font-display text-white leading-[1] mb-6" style={{ fontSize: "clamp(2.2rem, 6vw, 4.5rem)" }}>
             READY TO<br />

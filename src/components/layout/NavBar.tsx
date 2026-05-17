@@ -17,7 +17,7 @@ export default function NavBar() {
   // Determine if the navbar should use white text/icons.
   // We use dark text if scrolled, if mobile menu is open, or if we are on a page with a light background at the top.
   const lightPages = ['/about', '/partner', '/terms', '/privacy', '/cookies'];
-  const isLightPage = lightPages.includes(pathname);
+  const isLightPage = lightPages.includes(pathname) || pathname.startsWith('/services');
   const useWhiteText = !scrolled && !isOpen && !isLightPage;
 
   useEffect(() => {
@@ -57,7 +57,7 @@ export default function NavBar() {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (

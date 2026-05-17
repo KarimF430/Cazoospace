@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -13,14 +14,18 @@ export default function HeroSection() {
       <motion.div
         initial={{ opacity: 0, rotate: -20, scale: 0.8 }}
         animate={{ opacity: 0.08, rotate: 0, scale: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
         className="absolute top-[-10%] right-[-10%] w-[400px] h-[400px] md:w-[700px] md:h-[700px] pointer-events-none z-0 overflow-hidden rounded-[100px]"
       >
-        <img 
+        <Image 
           src="/logo-1.png" 
           alt="" 
+          width={700}
+          height={700}
           className="h-full w-auto max-w-none object-left"
           style={{ filter: "brightness(0) invert(1)" }}
+          aria-hidden="true"
+          priority
         />
       </motion.div>
 
@@ -29,7 +34,7 @@ export default function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.25 }}
           className="flex items-center gap-2 mb-6"
         >
           <span className="inline-flex items-center gap-2 font-mono text-[10px] md:text-[11px] text-white/80 tracking-[0.15em] bg-white/10 px-3 py-1.5 rounded-full backdrop-blur-sm">
@@ -45,7 +50,7 @@ export default function HeroSection() {
               key={i}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
+              transition={{ duration: 0.25, delay: 0.05 + i * 0.05 }}
               className="block"
             >
               {line}
@@ -57,7 +62,7 @@ export default function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.25, delay: 0.25 }}
           className="flex flex-wrap items-center gap-3 md:gap-4"
         >
           <Link 

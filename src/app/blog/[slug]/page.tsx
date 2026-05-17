@@ -21,7 +21,7 @@ export async function generateMetadata({
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
   return {
-    title: `${post.title} | NEXUS Blog`,
+    title: `${post.title} | Cazoo Space Blog`,
     description: post.excerpt,
     openGraph: {
       title: post.title,
@@ -37,7 +37,7 @@ export async function generateMetadata({
       description: post.excerpt,
     },
     alternates: {
-      canonical: `https://nexusagency.com/blog/${slug}`,
+      canonical: `https://cazoospace.com/blog/${slug}`,
     },
   };
 }
@@ -66,14 +66,14 @@ export default async function BlogPostPage({
             description: post.excerpt,
             author: {
               "@type": "Organization",
-              name: "NEXUS Agency",
+              name: "Cazoo Space",
             },
             publisher: {
               "@type": "Organization",
-              name: "NEXUS Agency",
+              name: "Cazoo Space",
               logo: {
                 "@type": "ImageObject",
-                url: "https://nexusagency.com/logo.svg",
+                url: "https://cazoospace.com/logo-1.png",
               },
             },
             datePublished: post.date,

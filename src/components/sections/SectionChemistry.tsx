@@ -50,7 +50,7 @@ export default function SectionChemistry() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
           className="mb-10 md:mb-20 relative max-w-[1200px] mx-auto px-0 md:px-4"
         >
           {/* Subtle background element */}
@@ -61,14 +61,17 @@ export default function SectionChemistry() {
             initial={{ opacity: 0, x: 50, rotate: -5 }}
             whileInView={{ opacity: 0.03, x: 0, rotate: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 1.5, ease: "easeOut" }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="absolute top-0 right-[-10%] md:right-0 w-[300px] h-[300px] md:w-[500px] md:h-[500px] pointer-events-none z-0 overflow-hidden rounded-3xl"
           >
-            <img
+            <Image
               src="/logo-1.png"
               alt=""
+              width={500}
+              height={500}
               className="h-full w-auto max-w-none object-left"
               style={{ filter: "grayscale(100%)" }}
+              aria-hidden="true"
             />
           </motion.div>
 
@@ -125,9 +128,9 @@ export default function SectionChemistry() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
               className={`flex flex-col ${feature.layout === 'image-left' ? 'md:flex-row' : 'md:flex-row-reverse'} items-center md:items-center relative z-10 mb-6 md:mb-0`}
-              style={{ marginTop: typeof window !== 'undefined' && window.innerWidth < 768 ? '0px' : feature.marginTop }}
+              style={{ marginTop: 0 }}
             >
               {/* Image Block */}
               <div className="w-full md:w-1/2 relative h-[260px] md:h-[400px] px-0 md:px-8">
@@ -143,8 +146,8 @@ export default function SectionChemistry() {
                     src={feature.image}
                     alt={feature.titleTop}
                     fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover"
-                    unoptimized
                   />
                 </div>
               </div>

@@ -43,7 +43,7 @@ export default function StatsSection() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
+              transition={{ duration: 0.25, delay: i * 0.05 }}
               className="relative pl-4 border-l-[3px] border-[#C8102E]/20"
             >
               <p className="font-display text-[#C8102E] leading-none" style={{ fontSize: "clamp(2.2rem, 5vw, 3.2rem)" }}>

@@ -21,7 +21,7 @@ export async function generateMetadata({
   const study = caseStudies.find((c) => c.slug === slug);
   if (!study) return {};
   return {
-    title: `${study.title} | NEXUS Case Study`,
+    title: `${study.title} | Cazoo Space Case Study`,
     description: `${study.heroStat} ${study.heroStatLabel} — ${study.heroContext}`,
     openGraph: {
       title: study.title,
@@ -29,7 +29,7 @@ export async function generateMetadata({
       images: [`/og/work-${slug}.jpg`],
     },
     alternates: {
-      canonical: `https://nexusagency.com/work/${slug}`,
+      canonical: `https://cazoospace.com/work/${slug}`,
     },
   };
 }
@@ -65,8 +65,8 @@ export default async function CaseStudyPage({
             "@type": "Article",
             headline: study.title,
             description: study.heroContext,
-            author: { "@type": "Organization", name: "NEXUS Agency" },
-            publisher: { "@type": "Organization", name: "NEXUS Agency", logo: { "@type": "ImageObject", url: "https://nexusagency.com/logo.svg" } },
+            author: { "@type": "Organization", name: "Cazoo Space" },
+            publisher: { "@type": "Organization", name: "Cazoo Space", logo: { "@type": "ImageObject", url: "https://cazoospace.com/logo-1.png" } },
           }),
         }}
       />

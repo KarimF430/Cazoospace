@@ -69,7 +69,7 @@ export default function SectionBuySell() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
+              transition={{ duration: 0.25, delay: i * 0.05 }}
               className="card group cursor-pointer"
             >
               <div className="relative h-[200px] md:h-[220px] overflow-hidden bg-white">
@@ -77,8 +77,8 @@ export default function SectionBuySell() {
                   src={item.image}
                   alt={item.title}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  unoptimized
                 />
                 <span className="absolute top-3 right-3 font-body text-[11px] font-semibold bg-green-50 text-green-700 px-2.5 py-1 rounded-md">
                   {item.condition}

@@ -8,14 +8,14 @@ import type { Metadata } from "next";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Blog | NEXUS Agency",
+  title: "Blog | Cazoo Space",
   description:
-    "Insights on proptech adoption, multifamily marketing, and enterprise execution strategy from the NEXUS team.",
-  alternates: { canonical: "https://nexusagency.com/blog" },
+    "Insights on experiential marketing, brand activation, and enterprise execution strategy from the Cazoo Space team.",
+  alternates: { canonical: "https://cazoospace.com/blog" },
   openGraph: {
-    title: "Blog | NEXUS Agency",
+    title: "Blog | Cazoo Space",
     description:
-      "Proptech adoption, multifamily marketing, and enterprise execution strategy.",
+      "Experiential marketing, brand activation, and enterprise execution strategy.",
     images: ["/og/blog.jpg"],
   },
 };

@@ -96,7 +96,7 @@ export default function SectionFeaturedSpaces() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
+              transition={{ duration: 0.25, delay: i * 0.04 }}
               className="card group cursor-pointer"
             >
               {/* Image */}
@@ -105,8 +105,8 @@ export default function SectionFeaturedSpaces() {
                   src={space.image}
                   alt={space.title}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  unoptimized
                 />
                 <span className="absolute top-3 left-3 font-mono text-[10px] font-bold bg-white/90 backdrop-blur-sm text-[#C8102E] px-2.5 py-1 rounded-md">
                   {space.type}

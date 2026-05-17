@@ -59,7 +59,7 @@ export default function PalantirVerticals() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
+              transition={{ duration: 0.25, delay: i * 0.05 }}
               className="group relative bg-[#222222] rounded-2xl p-6 md:p-7 border border-white/[0.04] transition-all duration-300 hover:border-[#C8102E]/20 hover:bg-[#282828]"
             >
               {/* Hover gradient */}
