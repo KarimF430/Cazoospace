@@ -1,5 +1,6 @@
 import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
+import PartnerForm from "@/components/sections/PartnerForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -65,78 +66,7 @@ export default function PartnerPage() {
 
               {/* Right Column: Clean Light Form */}
               <div className="lg:col-span-7 w-full">
-                <div className="bg-white border border-black/5 rounded-[24px] md:rounded-[32px] p-6 sm:p-8 md:p-12 shadow-xl shadow-black/5">
-                  <form className="flex flex-col gap-6 md:gap-8">
-                    
-                    <div className="flex flex-col gap-2">
-                      <label htmlFor="name" className="font-mono text-[11px] text-[#555] tracking-wider uppercase pl-1">Full Name & Company</label>
-                      <input 
-                        type="text" 
-                        id="name" 
-                        name="name" 
-                        className="bg-[#F9F9F9] border border-black/10 rounded-xl px-4 md:px-5 py-3 md:py-4 font-body text-[15px] text-[#1A1A1A] placeholder:text-[#999] focus:outline-none focus:border-[#C8102E] focus:bg-white focus:ring-1 focus:ring-[#C8102E] transition-all" 
-                        placeholder="Jane Doe, Acme Corp" 
-                        required 
-                      />
-                    </div>
-
-                    <div className="flex flex-col gap-2">
-                      <label htmlFor="email" className="font-mono text-[11px] text-[#555] tracking-wider uppercase pl-1">Work Email</label>
-                      <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        className="bg-[#F9F9F9] border border-black/10 rounded-xl px-4 md:px-5 py-3 md:py-4 font-body text-[15px] text-[#1A1A1A] placeholder:text-[#999] focus:outline-none focus:border-[#C8102E] focus:bg-white focus:ring-1 focus:ring-[#C8102E] transition-all" 
-                        placeholder="jane@acmecorp.com" 
-                        required 
-                      />
-                    </div>
-
-                    <div className="flex flex-col gap-2">
-                      <label htmlFor="type" className="font-mono text-[11px] text-[#555] tracking-wider uppercase pl-1">Primary Goal / Engagement Type</label>
-                      <div className="relative">
-                        <select 
-                          id="type" 
-                          name="type" 
-                          className="w-full bg-[#F9F9F9] border border-black/10 rounded-xl px-4 md:px-5 py-3 md:py-4 font-body text-[15px] text-[#1A1A1A] focus:outline-none focus:border-[#C8102E] focus:bg-white focus:ring-1 focus:ring-[#C8102E] transition-all appearance-none cursor-pointer"
-                        >
-                          <option value="b2b-sales">B2B Sales Acceleration</option>
-                          <option value="event-marketing">Event Marketing / Activation</option>
-                          <option value="branding">Corporate Branding</option>
-                          <option value="digital">Digital Advertising / Social</option>
-                          <option value="other">Other Inquiry</option>
-                        </select>
-                        <div className="absolute right-4 md:right-5 top-1/2 -translate-y-1/2 pointer-events-none text-[#555]">
-                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col gap-2">
-                      <label htmlFor="details" className="font-mono text-[11px] text-[#555] tracking-wider uppercase pl-1">Tell us about your project goals...</label>
-                      <textarea 
-                        id="details" 
-                        name="details" 
-                        rows={5} 
-                        className="bg-[#F9F9F9] border border-black/10 rounded-xl px-4 md:px-5 py-3 md:py-4 font-body text-[15px] text-[#1A1A1A] placeholder:text-[#999] focus:outline-none focus:border-[#C8102E] focus:bg-white focus:ring-1 focus:ring-[#C8102E] transition-all resize-none" 
-                        placeholder="What are you looking to achieve? E.g., App downloads, B2B pipeline, brand awareness..." 
-                        required
-                      ></textarea>
-                    </div>
-
-                    <button 
-                      type="submit" 
-                      className="mt-2 md:mt-4 w-full group relative inline-flex items-center justify-center font-body text-[15px] md:text-[16px] font-bold text-white bg-[#C8102E] px-8 py-4 md:py-5 rounded-xl hover:bg-[#A00D24] transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
-                    >
-                      <span>Request Briefing</span>
-                      <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </button>
-                    
-                    <p className="text-center font-body text-[12px] text-[#999] mt-2">
-                      By submitting, you agree to our <a href="/privacy" className="underline hover:text-[#555] transition-colors">Privacy Policy</a>.
-                    </p>
-                  </form>
-                </div>
+                <PartnerForm />
               </div>
 
             </div>
