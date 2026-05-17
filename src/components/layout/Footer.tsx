@@ -14,16 +14,10 @@ const footerSections = {
     { label: "Contact Us", href: "/partner" },
     { label: "Feedback", href: "#" },
   ],
-  Community: [
-    { label: "Find a Roommate", href: "#" },
-    { label: "Marketplace", href: "#" },
-    { label: "Blog", href: "/blog" },
-    { label: "Testimonials", href: "#" },
-  ],
   Legal: [
-    { label: "Terms & Conditions", href: "#" },
-    { label: "Privacy Policy", href: "#" },
-    { label: "Cookie Policy", href: "#" },
+    { label: "Terms & Conditions", href: "/terms" },
+    { label: "Privacy Policy", href: "/privacy" },
+    { label: "Cookie Policy", href: "/cookies" },
   ],
 };
 
@@ -74,7 +68,7 @@ export default function Footer() {
         </div>
 
         {/* Link Columns */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16">
           {Object.entries(footerSections).map(([title, links]) => (
             <div key={title}>
               <h4 className="font-body font-semibold text-[14px] text-white mb-4">{title}</h4>
@@ -97,9 +91,9 @@ export default function Footer() {
             © {new Date().getFullYear()} Cazoo Space Inc. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link href="#" className="font-body text-[12px] text-white/30 hover:text-white/60 transition-colors">Terms</Link>
-            <Link href="#" className="font-body text-[12px] text-white/30 hover:text-white/60 transition-colors">Privacy</Link>
-            <Link href="#" className="font-body text-[12px] text-white/30 hover:text-white/60 transition-colors">Cookies</Link>
+            <Link href="/terms" className="font-body text-[12px] text-white/30 hover:text-white/60 transition-colors">Terms</Link>
+            <Link href="/privacy" className="font-body text-[12px] text-white/30 hover:text-white/60 transition-colors">Privacy</Link>
+            <Link href="/cookies" className="font-body text-[12px] text-white/30 hover:text-white/60 transition-colors">Cookies</Link>
           </div>
         </div>
       </div>

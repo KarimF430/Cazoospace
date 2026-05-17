@@ -2,71 +2,41 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Users, DollarSign, Landmark, Cpu, Zap, Sparkles } from "lucide-react";
 
 const services = [
   {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" />
-        <path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
-      </svg>
-    ),
+    icon: <Users size={28} strokeWidth={1.5} />,
     title: "B2B Sales",
     desc: "Enterprise ground-game. We provide the physical presence, reference installations, and relationship events needed to close complex deals.",
     tag: "SALES",
   },
   {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-      </svg>
-    ),
+    icon: <DollarSign size={28} strokeWidth={1.5} />,
     title: "FinTech",
     desc: "Cutting-edge marketing strategies tailored for financial technology firms, helping you build trust and scale user acquisition globally.",
     tag: "FINANCE TECH",
   },
   {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="20" width="20" height="2" />
-        <path d="M2 14h20" />
-        <path d="M4 14v6" /><path d="M8 14v6" /><path d="M12 14v6" /><path d="M16 14v6" /><path d="M20 14v6" />
-        <path d="M12 2 2 10h20Z" />
-      </svg>
-    ),
+    icon: <Landmark size={28} strokeWidth={1.5} />,
     title: "Financial Services",
     desc: "Elevating traditional financial institutions with modern branding, ensuring compliance while driving digital transformation and engagement.",
     tag: "FINANCE",
   },
   {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="4" y="4" width="16" height="16" rx="2" />
-        <path d="M9 9h6v6H9z" />
-        <path d="M12 2v2" /><path d="M12 20v2" />
-        <path d="M2 12h2" /><path d="M20 12h2" />
-      </svg>
-    ),
+    icon: <Cpu size={28} strokeWidth={1.5} />,
     title: "Technology",
     desc: "Comprehensive brand positioning for software vendors and hardware enterprises, translating complex technical specs into compelling narratives.",
     tag: "TECH",
   },
   {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-      </svg>
-    ),
+    icon: <Zap size={28} strokeWidth={1.5} />,
     title: "Energy",
     desc: "Strategic communications for the energy sector, highlighting sustainability initiatives, infrastructure developments, and grid modernizations.",
     tag: "ENERGY",
   },
   {
-    icon: (
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
-      </svg>
-    ),
+    icon: <Sparkles size={28} strokeWidth={1.5} />,
     title: "Brand Activation",
     desc: "High-impact experiential campaigns and pop-ups that transform passive observers into loyal brand advocates through immersive human connection.",
     tag: "ACTIVATION",

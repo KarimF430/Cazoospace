@@ -1,27 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-
+import { LayoutGrid, TrendingUp } from "lucide-react";
 export default function AboutSection() {
   const executionCards = [
     {
       title: "Large-Scale Rollouts",
       desc: "We deploy field teams across multiple properties simultaneously, ensuring technology is activated portfolio-wide.",
-      icon: (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <rect width="7" height="7" x="3" y="3" rx="1" /><rect width="7" height="7" x="14" y="3" rx="1" />
-          <rect width="7" height="7" x="14" y="14" rx="1" /><rect width="7" height="7" x="3" y="14" rx="1" />
-        </svg>
-      ),
+      icon: <LayoutGrid size={20} strokeWidth={1.5} />,
     },
     {
       title: "Measurable Growth",
       desc: "We track registrations, app downloads, and daily active users — reporting directly against your KPIs.",
-      icon: (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-        </svg>
-      ),
+      icon: <TrendingUp size={20} strokeWidth={1.5} />,
     },
   ];
 

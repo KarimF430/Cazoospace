@@ -9,9 +9,9 @@ import SectionBookBriefing from "@/components/sections/SectionBookBriefing";
 import PalantirCallout from "@/components/sections/PalantirCallout";
 import SectionDeliverables from "@/components/sections/SectionDeliverables";
 import PalantirVerticals from "@/components/sections/PalantirVerticals";
-import PalantirCaseStudies from "@/components/sections/PalantirCaseStudies";
 import PalantirProcess from "@/components/sections/PalantirProcess";
 import PalantirCTA from "@/components/sections/PalantirCTA";
+import SectionFAQ from "@/components/sections/SectionFAQ";
 
 export default function HomePage() {
   return (
@@ -26,10 +26,10 @@ export default function HomePage() {
         <SectionBookBriefing />
         <SectionDeliverables />
         <PalantirVerticals />
-        <PalantirCaseStudies />
         <PalantirProcess />
         <PalantirCallout />
         <PalantirCTA />
+        <SectionFAQ />
       </main>
       <Footer />
     </>

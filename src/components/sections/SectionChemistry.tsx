@@ -23,7 +23,7 @@ export default function SectionChemistry() {
       titleBottom: "YOUR SPACE!",
       desc: "We deploy on-site, face-to-face activation campaigns that drive real adoption. We make sure your residents know how to use it.",
       btnText: "ACTIVATE NOW!",
-      image: "https://images.unsplash.com/photo-1552581234-26160f608093?w=800&q=80",
+      image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&q=80",
       layout: "image-left",
       borderRadius: "20px 80px 80px 80px",
       marginTop: "-50px" // Overlap slightly
@@ -51,7 +51,7 @@ export default function SectionChemistry() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="mb-12 md:mb-20 relative max-w-[1200px] mx-auto px-4"
+          className="mb-10 md:mb-20 relative max-w-[1200px] mx-auto px-0 md:px-4"
         >
           {/* Subtle background element */}
           <div className="absolute top-0 right-0 w-[40vw] h-[40vw] bg-[#C8102E]/5 rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/4" />
@@ -72,7 +72,7 @@ export default function SectionChemistry() {
             />
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-center relative z-10">
             {/* Left Column: The Big Hook */}
             <div className="lg:col-span-6 flex flex-col items-start">
               <span className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white border border-black/5 text-[#C8102E] font-mono text-[11px] tracking-[0.2em] font-semibold mb-6 shadow-sm">
@@ -97,7 +97,7 @@ export default function SectionChemistry() {
 
             {/* Right Column: The Details & Industries */}
             <div className="lg:col-span-6 flex flex-col justify-center">
-              <p className="font-body text-[16px] md:text-[18px] text-[#555] leading-[1.8] font-light mb-10">
+              <p className="font-body text-[16px] md:text-[18px] text-[#555] leading-[1.8] font-light mb-6 md:mb-10">
                 <strong className="text-[#1A1A1A] font-semibold">CAZOO SPACE</strong> focuses on creating meaningful human connections through innovative marketing, experiential activations, and strategic engagement.
                 <br /><br />
                 Through years of building relationships with major corporations, developers, and emerging brands, we help businesses increase visibility, strengthen trust, and drive long-term growth in today’s evolving market.
@@ -126,13 +126,13 @@ export default function SectionChemistry() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className={`flex flex-col ${feature.layout === 'image-left' ? 'md:flex-row' : 'md:flex-row-reverse'} items-center md:items-center relative z-10 mb-12 md:mb-0`}
+              className={`flex flex-col ${feature.layout === 'image-left' ? 'md:flex-row' : 'md:flex-row-reverse'} items-center md:items-center relative z-10 mb-6 md:mb-0`}
               style={{ marginTop: typeof window !== 'undefined' && window.innerWidth < 768 ? '0px' : feature.marginTop }}
             >
               {/* Image Block */}
-              <div className="w-full md:w-1/2 relative h-[300px] md:h-[400px] px-4 md:px-8">
+              <div className="w-full md:w-1/2 relative h-[260px] md:h-[400px] px-0 md:px-8">
                 <div
-                  className="absolute inset-4 md:inset-8 overflow-hidden bg-white"
+                  className="absolute inset-y-4 inset-x-2 md:inset-8 overflow-hidden bg-white"
                   style={{
                     borderRadius: feature.borderRadius,
                     boxShadow: "0 20px 50px rgba(0,0,0,0.08)",
@@ -150,7 +150,7 @@ export default function SectionChemistry() {
               </div>
 
               {/* Text Block */}
-              <div className={`w-full md:w-1/2 flex flex-col justify-center relative px-6 md:px-12 mt-4 md:mt-0 ${feature.layout === 'image-left' ? 'text-left md:items-start' : 'text-left md:items-end md:text-right'}`}>
+              <div className={`w-full md:w-1/2 flex flex-col justify-center relative px-4 md:px-12 mt-2 md:mt-0 ${feature.layout === 'image-left' ? 'text-left md:items-start' : 'text-left md:items-end md:text-right'}`}>
 
                 <h3 className="font-display text-[#C8102E] leading-[1.1] mb-2" style={{ fontSize: "clamp(2rem, 3.5vw, 2.5rem)" }}>
                   <span className="font-bold">{feature.titleTop}</span><br />
@@ -158,8 +158,16 @@ export default function SectionChemistry() {
                 </h3>
 
                 {/* Connecting Line */}
-                <div className="relative w-full flex items-center my-4">
-                  <div className={`w-full h-[2px] bg-[#C8102E] ${feature.layout === 'image-left' ? '-ml-12 md:-ml-24' : 'ml-0 md:-mr-24'} relative z-0`} />
+                <div className="relative w-full h-[2px] my-4 md:my-6">
+                  <div 
+                    className="absolute top-0 h-full bg-[#C8102E] z-0" 
+                    style={{
+                      width: 'calc(100% + 40px)',
+                      ...(feature.layout === 'image-left' 
+                        ? { right: 0 } 
+                        : { left: 0 })
+                    }} 
+                  />
                 </div>
 
                 <div className={`pt-2 mb-6 ${feature.layout === 'image-left' ? 'md:pr-12' : 'md:pl-12'}`}>

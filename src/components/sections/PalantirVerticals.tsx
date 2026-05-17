@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { Megaphone, Building2, LineChart } from "lucide-react";
 
 const verticals = [
   {
@@ -9,33 +10,21 @@ const verticals = [
     title: "Experiential Marketing",
     desc: "Executing high-impact ground events and activations that turn passive observers into loyal brand advocates.",
     stats: "150+ successful campaigns",
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-      </svg>
-    ),
+    icon: <Megaphone size={32} strokeWidth={1.5} />,
   },
   {
     tag: "B2B SALES",
     title: "Enterprise Enablement",
     desc: "Driving enterprise pipeline through targeted outreach, strategic positioning, and meaningful relationship building.",
     stats: "2.5x avg conversion rate",
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" />
-      </svg>
-    ),
+    icon: <Building2 size={32} strokeWidth={1.5} />,
   },
   {
     tag: "STRATEGY",
     title: "Growth Consulting",
     desc: "Auditing your brand presence and engineering scalable, data-driven growth models tailored to your industry.",
     stats: "$3B+ client portfolio",
-    icon: (
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <rect width="20" height="14" x="2" y="3" rx="2" /><line x1="8" x2="16" y1="21" y2="21" /><line x1="12" x2="12" y1="17" y2="21" />
-      </svg>
-    ),
+    icon: <LineChart size={32} strokeWidth={1.5} />,
   },
 ];
 
@@ -97,11 +86,6 @@ export default function PalantirVerticals() {
                   {vert.desc}
                 </p>
 
-                {/* Stats pill */}
-                <div className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C8102E]" />
-                  <span className="font-mono text-[10px] text-white/30 tracking-wider uppercase">{vert.stats}</span>
-                </div>
               </div>
             </motion.div>
           ))}
