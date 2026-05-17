@@ -12,7 +12,7 @@ export default function SectionChemistry() {
       titleBottom: "YOUR TEAM!",
       desc: "We assign specialized field teams trained on your exact hardware and software. We align our experts with your requirements.",
       btnText: "FIND YOURS!",
-      image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&q=80",
+      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80",
       layout: "image-right",
       borderRadius: "80px 80px 20px 80px",
       marginTop: "0px"
@@ -34,7 +34,7 @@ export default function SectionChemistry() {
       titleBottom: "YOUR GROWTH!",
       desc: "We replicate winning playbooks across your entire portfolio simultaneously. We ensure consistent execution across all locations.",
       btnText: "SCALE FAST!",
-      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
+      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
       layout: "image-right",
       borderRadius: "80px 20px 80px 80px",
       marginTop: "50px"

@@ -57,7 +57,7 @@ export default function Footer() {
             alt="Cazoo Space"
             width={200}
             height={48}
-            className="object-contain h-12 w-auto brightness-0 invert"
+            className="object-contain h-[53px] w-auto brightness-0 invert"
           />
           <div className="flex items-center gap-3">
             {socialLinks.map((social) => (

@@ -1,7 +1,7 @@
 import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
 import PalantirHero from "@/components/sections/PalantirHero";
-import PalantirStats from "@/components/sections/PalantirStats";
+
 import SectionChemistry from "@/components/sections/SectionChemistry";
 import PalantirAbout from "@/components/sections/PalantirAbout";
 import PalantirServices from "@/components/sections/PalantirServices";
@@ -19,7 +19,7 @@ export default function HomePage() {
       <NavBar />
       <main id="main-content">
         <PalantirHero />
-        <PalantirStats />
+
         <SectionChemistry />
         <PalantirAbout />
         <PalantirServices />

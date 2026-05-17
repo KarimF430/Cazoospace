@@ -45,7 +45,7 @@ export default function NavBar() {
               alt="Cazoo Space"
               width={200}
               height={48}
-              className={`object-contain h-10 md:h-12 w-auto transition-all duration-300 ${
+              className={`object-contain h-11 md:h-[53px] w-auto transition-all duration-300 ${
                 !scrolled && !isOpen ? "brightness-0 invert" : ""
               }`}
               priority
