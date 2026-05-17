@@ -53,7 +53,7 @@ export async function POST(request: Request) {
     const sheets = google.sheets({ version: "v4", auth });
 
     // 4. Create row content
-    const timestamp = new Date().toLocaleString("en-US", { timeZone: "America/Edmonton" }); // Match Alberta HQ
+    const timestamp = new Date().toLocaleString("en-US", { timeZone: "America/Edmonton" }); // Canadian Timezone (Calgary)
     const values = [[timestamp, name.trim(), email.trim(), type, details.trim()]];
 
     // 5. Append to Google Sheet (using Sheet1, columns A to E)

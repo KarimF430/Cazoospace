@@ -53,13 +53,38 @@ const services = [
 function ServiceCard({ svc, index }: { svc: typeof services[0]; index: number }) {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    if (!email || loading) return;
+
+    setLoading(true);
+    setError(false);
+
+    try {
+      const response = await fetch("/api/partner", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: "Quick Lead (Service Card)",
+          email: email,
+          type: svc.slug,
+          details: `Lead captured from the inline email form on the ${svc.title} service card.`
+        }),
+      });
+
+      if (!response.ok) throw new Error();
+
       setSubmitted(true);
-      setTimeout(() => setSubmitted(false), 3000);
       setEmail("");
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err) {
+      setError(true);
+      setTimeout(() => setError(false), 4000);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -101,13 +126,15 @@ function ServiceCard({ svc, index }: { svc: typeof services[0]; index: number })
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              disabled={loading}
               placeholder="Your work email"
-              className="flex-1 min-w-0 bg-[#F9F9F9] border border-black/10 rounded-lg px-3 py-2 font-body text-[12px] text-[#1A1A1A] placeholder:text-[#999] focus:outline-none focus:border-[#C8102E] focus:ring-1 focus:ring-[#C8102E] transition-all"
+              className="flex-1 min-w-0 bg-[#F9F9F9] border border-black/10 rounded-lg px-3 py-2 font-body text-[12px] text-[#1A1A1A] placeholder:text-[#999] focus:outline-none focus:border-[#C8102E] focus:ring-1 focus:ring-[#C8102E] transition-all disabled:opacity-50"
               required
             />
             <button
               type="submit"
-              className="flex-shrink-0 w-9 h-9 rounded-lg bg-[#C8102E] text-white flex items-center justify-center hover:bg-[#A00D24] transition-colors"
+              disabled={loading}
+              className="flex-shrink-0 w-9 h-9 rounded-lg bg-[#C8102E] text-white flex items-center justify-center hover:bg-[#A00D24] transition-colors disabled:opacity-50"
               aria-label="Submit email"
             >
               <Send size={14} strokeWidth={2} />
@@ -115,6 +142,9 @@ function ServiceCard({ svc, index }: { svc: typeof services[0]; index: number })
           </form>
           {submitted && (
             <p className="font-body text-[11px] text-green-600 animate-pulse">Thank you! We'll be in touch.</p>
+          )}
+          {error && (
+            <p className="font-body text-[11px] text-[#C8102E] animate-pulse">Failed to submit. Try again.</p>
           )}
 
           {/* Learn more link */}

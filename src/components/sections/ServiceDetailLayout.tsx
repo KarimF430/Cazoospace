@@ -52,13 +52,38 @@ export default function ServiceDetailLayout({
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    if (!email || loading) return;
+
+    setLoading(true);
+    setError(false);
+
+    try {
+      const response = await fetch("/api/partner", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: "Quick Lead (Service Page)",
+          email: email,
+          type: tag,
+          details: `Lead captured from the inline email form on the ${title} detailed service page.`
+        }),
+      });
+
+      if (!response.ok) throw new Error();
+
       setSubmitted(true);
-      setTimeout(() => setSubmitted(false), 4000);
       setEmail("");
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err) {
+      setError(true);
+      setTimeout(() => setError(false), 4000);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -234,19 +259,24 @@ export default function ServiceDetailLayout({
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  disabled={loading}
                   placeholder="Your work email"
-                  className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 font-body text-[15px] text-white placeholder:text-white/30 focus:outline-none focus:border-[#C8102E] transition-all"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 font-body text-[15px] text-white placeholder:text-white/30 focus:outline-none focus:border-[#C8102E] transition-all disabled:opacity-50"
                   required
                 />
                 <button
                   type="submit"
-                  className="w-full group inline-flex items-center justify-center gap-2 font-body text-[15px] font-bold text-white bg-[#C8102E] px-8 py-4 rounded-xl hover:bg-[#A00D24] transition-all duration-300"
+                  disabled={loading}
+                  className="w-full group inline-flex items-center justify-center gap-2 font-body text-[15px] font-bold text-white bg-[#C8102E] px-8 py-4 rounded-xl hover:bg-[#A00D24] transition-all duration-300 disabled:opacity-50"
                 >
-                  <span>Request Briefing</span>
-                  <Send size={14} strokeWidth={2} className="group-hover:translate-x-1 transition-transform" />
+                  <span>{loading ? "Requesting..." : "Request Briefing"}</span>
+                  {!loading && <Send size={14} strokeWidth={2} className="group-hover:translate-x-1 transition-transform" />}
                 </button>
                 {submitted && (
                   <p className="font-body text-[13px] text-green-400 text-center animate-pulse">Thank you! Our team will reach out soon.</p>
+                )}
+                {error && (
+                  <p className="font-body text-[13px] text-red-400 text-center animate-pulse">Failed to submit. Try again.</p>
                 )}
               </form>
             </motion.div>
