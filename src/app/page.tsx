@@ -3,13 +3,10 @@ import Footer from "@/components/layout/Footer";
 import PalantirHero from "@/components/sections/PalantirHero";
 
 import SectionChemistry from "@/components/sections/SectionChemistry";
-import PalantirAbout from "@/components/sections/PalantirAbout";
 import PalantirServices from "@/components/sections/PalantirServices";
 import SectionBookBriefing from "@/components/sections/SectionBookBriefing";
 import PalantirCallout from "@/components/sections/PalantirCallout";
-import SectionDeliverables from "@/components/sections/SectionDeliverables";
 import PalantirVerticals from "@/components/sections/PalantirVerticals";
-import PalantirProcess from "@/components/sections/PalantirProcess";
 import PalantirCTA from "@/components/sections/PalantirCTA";
 import SectionFAQ from "@/components/sections/SectionFAQ";
 import type { Metadata } from "next";
@@ -66,24 +63,18 @@ export default function HomePage() {
         <div className="section-lazy">
           <SectionChemistry />
         </div>
-        <div className="section-lazy">
-          <PalantirAbout />
-        </div>
+
         <div className="section-lazy">
           <PalantirServices />
         </div>
         <div className="section-lazy">
           <SectionBookBriefing />
         </div>
-        <div className="section-lazy">
-          <SectionDeliverables />
-        </div>
+
         <div className="section-lazy">
           <PalantirVerticals />
         </div>
-        <div className="section-lazy">
-          <PalantirProcess />
-        </div>
+
         <div className="section-lazy">
           <PalantirCallout />
         </div>

@@ -109,10 +109,17 @@ export default function SectionChemistry() {
               <div className="flex flex-col gap-4">
                 <p className="font-mono text-[10px] text-[#C8102E] tracking-widest font-semibold uppercase">Our Expertise Across</p>
                 <div className="flex flex-wrap gap-2 md:gap-3">
-                  {["B2B Sales", "FinTech", "Financial Services", "Technology", "Energy", "Brand Activation"].map((tag) => (
-                    <span key={tag} className="px-4 py-2 rounded-full border border-black/10 text-[13px] font-body text-[#1A1A1A] bg-black/[0.02] hover:bg-[#C8102E] hover:text-white hover:border-[#C8102E] transition-colors cursor-default">
-                      {tag}
-                    </span>
+                  {[
+                    { label: "B2B Sales", href: "/services/b2b-sales" },
+                    { label: "FinTech", href: "/services/fintech" },
+                    { label: "Financial Services", href: "/services/financial-services" },
+                    { label: "Technology", href: "/services/technology" },
+                    { label: "Energy", href: "/services/energy" },
+                    { label: "Brand Activation", href: "/services/brand-activation" }
+                  ].map((tag) => (
+                    <Link key={tag.label} href={tag.href} className="px-4 py-2 rounded-full border border-black/10 text-[13px] font-body text-[#1A1A1A] bg-black/[0.02] hover:bg-[#C8102E] hover:text-white hover:border-[#C8102E] transition-colors">
+                      {tag.label}
+                    </Link>
                   ))}
                 </div>
               </div>

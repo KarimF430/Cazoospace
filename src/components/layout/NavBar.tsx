@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "What You Get", href: "/what-you-get" },
 ];
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ export default function NavBar() {
   
   // Determine if the navbar should use white text/icons.
   // We use dark text if scrolled, if mobile menu is open, or if we are on a page with a light background at the top.
-  const lightPages = ['/about', '/partner', '/terms', '/privacy', '/cookies'];
+  const lightPages = ['/about', '/partner', '/terms', '/privacy', '/cookies', '/what-you-get'];
   const isLightPage = lightPages.includes(pathname) || pathname.startsWith('/services');
   const useWhiteText = !scrolled && !isOpen && !isLightPage;
 
@@ -128,6 +129,7 @@ export default function NavBar() {
               { label: "Home", href: "/" },
               { label: "About Us", href: "/about" },
               { label: "Services", href: "/services" },
+              { label: "What You Get", href: "/what-you-get" },
               { label: "Partner Program", href: "/partner" },
             ].map((link, i) => (
               <Link

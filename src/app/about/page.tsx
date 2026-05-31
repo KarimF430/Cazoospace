@@ -1,6 +1,7 @@
 import NavBar from "@/components/layout/NavBar";
 import Footer from "@/components/layout/Footer";
 import PalantirCTA from "@/components/sections/PalantirCTA";
+import PalantirAbout from "@/components/sections/PalantirAbout";
 import Image from "next/image";
 import { Users, Star, LayoutGrid, Activity } from "lucide-react";
 import type { Metadata } from "next";
@@ -107,41 +108,8 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* OUR DNA / BENTO GRID */}
-        <section className="py-16 md:py-24 bg-[#F9F9F9] border-t border-black/5">
-          <div className="container-site">
-            <div className="flex flex-col items-center text-center mb-12 md:mb-16 max-w-2xl mx-auto">
-              <span className="inline-flex items-center gap-2 py-1.5 px-4 rounded-full bg-white border border-black/5 text-[#C8102E] font-mono text-[10px] md:text-[11px] tracking-[0.2em] font-semibold mb-4 shadow-sm">
-                OUR EXPERTISE
-              </span>
-              <h2 className="font-display text-[2rem] md:text-[3rem] text-[#1A1A1A] leading-tight">
-                How We <span className="text-[#C8102E] italic font-light">Execute.</span>
-              </h2>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-              {corePillars.map((v, i) => (
-                <div
-                  key={v.title}
-                  className="bg-white p-8 rounded-[24px] border border-black/5 hover:border-[#C8102E]/30 transition-colors group flex flex-col"
-                >
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 rounded-full bg-[#C8102E]/10 text-[#C8102E] flex items-center justify-center group-hover:bg-[#C8102E] group-hover:text-white transition-colors duration-300">
-                      {v.icon}
-                    </div>
-                    <h3 className="font-display text-[1.25rem] md:text-[1.5rem] text-[#1A1A1A] mt-1">
-                      {v.title}
-                    </h3>
-                  </div>
-                  
-                  <p className="font-body text-[#555] text-[14px] md:text-[15px] leading-[1.8] font-light">
-                    {v.body}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* OUR DNA SECTION */}
+        <PalantirAbout />
 
         <PalantirCTA />
       </main>
