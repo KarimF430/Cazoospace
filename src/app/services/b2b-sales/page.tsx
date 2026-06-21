@@ -96,7 +96,7 @@ export default function B2BSalesPage() {
         <section className="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden">
           {/* Subtle animated background blur */}
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#C8102E]/[0.03] rounded-full blur-[100px] pointer-events-none -translate-y-1/2 translate-x-1/2 animate-pulse-slow" />
-          
+
           <div className="container-site max-w-5xl mx-auto px-4 md:px-6 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 15 }}
@@ -144,36 +144,32 @@ export default function B2BSalesPage() {
                       className="w-full flex items-center justify-between py-8 md:py-10 text-left focus:outline-none"
                     >
                       <div className="flex items-center gap-6 md:gap-12">
-                        <span 
-                          className={`font-mono text-xl md:text-2xl transition-colors duration-500 ${
-                            isActive ? "text-[#C8102E]" : "text-[#1A1A1A]/20 group-hover:text-[#1A1A1A]/40"
-                          }`}
+                        <span
+                          className={`font-mono text-xl md:text-2xl transition-colors duration-500 ${isActive ? "text-[#C8102E]" : "text-[#1A1A1A]/20 group-hover:text-[#1A1A1A]/40"
+                            }`}
                         >
                           {div.num}
                         </span>
-                        <h2 
-                          className={`font-display text-2xl md:text-4xl lg:text-5xl transition-colors duration-500 ${
-                            isActive ? "text-[#1A1A1A]" : "text-[#1A1A1A]/60 group-hover:text-[#1A1A1A]"
-                          }`}
+                        <h2
+                          className={`font-display text-2xl md:text-4xl lg:text-5xl transition-colors duration-500 ${isActive ? "text-[#1A1A1A]" : "text-[#1A1A1A]/60 group-hover:text-[#1A1A1A]"
+                            }`}
                         >
                           {div.title}
                         </h2>
                       </div>
-                      
+
                       <div className="flex items-center gap-8">
                         {/* Desktop Icon - Hidden on small screens */}
-                        <div 
-                          className={`hidden md:flex items-center justify-center w-12 h-12 rounded-full transition-all duration-500 ${
-                            isActive ? "bg-[#FFF0F2] text-[#C8102E]" : "bg-transparent text-[#1A1A1A]/20"
-                          }`}
+                        <div
+                          className={`hidden md:flex items-center justify-center w-12 h-12 rounded-full transition-all duration-500 ${isActive ? "bg-[#FFF0F2] text-[#C8102E]" : "bg-transparent text-[#1A1A1A]/20"
+                            }`}
                         >
                           {div.icon}
                         </div>
                         {/* Toggle Icon */}
-                        <div 
-                          className={`flex items-center justify-center transition-transform duration-500 ${
-                            isActive ? "rotate-180 text-[#C8102E]" : "text-[#1A1A1A]/40"
-                          }`}
+                        <div
+                          className={`flex items-center justify-center transition-transform duration-500 ${isActive ? "rotate-180 text-[#C8102E]" : "text-[#1A1A1A]/40"
+                            }`}
                         >
                           {isActive ? <Minus size={24} strokeWidth={1.5} /> : <Plus size={24} strokeWidth={1.5} />}
                         </div>
@@ -191,13 +187,13 @@ export default function B2BSalesPage() {
                           className="overflow-hidden"
                         >
                           <div className="pb-10 pl-[52px] md:pl-[84px] pr-4 grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16">
-                            
+
                             {/* Left: Body Description */}
                             <div className="md:col-span-6 lg:col-span-7">
                               <p className="font-body text-[#555] text-[16px] md:text-[18px] leading-[1.8] font-light">
                                 {div.body}
                               </p>
-                              
+
                               <Link
                                 href="/partner"
                                 className="inline-flex items-center gap-3 mt-8 font-body text-[14px] font-bold text-white bg-[#1A1A1A] hover:bg-[#C8102E] px-8 py-4 rounded-xl transition-all duration-300 group/link hover:shadow-lg hover:shadow-[#C8102E]/20"
@@ -221,7 +217,7 @@ export default function B2BSalesPage() {
                                 ))}
                               </ul>
                             </div>
-                            
+
                           </div>
                         </motion.div>
                       )}

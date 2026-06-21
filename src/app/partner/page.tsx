@@ -34,20 +34,14 @@ export default function PartnerPage() {
                 </p>
 
                 {/* Social Proof / Trust Signals */}
-                <div className="flex flex-col gap-6 p-6 rounded-2xl bg-white border border-black/5 shadow-sm mb-10">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-[#F0F0F0] flex items-center justify-center text-[#C8102E]">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
-                    </div>
-                    <div>
-                      <p className="font-display text-[#1A1A1A] text-[24px] leading-none mb-1">150+</p>
-                      <p className="font-mono text-[10px] text-[#555] tracking-wider uppercase">Successful Campaigns</p>
-                    </div>
+                <div className="flex items-center gap-6 p-6 rounded-2xl bg-[#1A1A1A] border border-white/5 shadow-sm mb-10">
+                  <div className="flex items-baseline font-display text-[48px] leading-none font-bold">
+                    <span className="text-[#C8102E]">20</span>
+                    <span className="text-white">+</span>
                   </div>
-                  <div className="h-px w-full bg-black/5" />
-                  <div className="flex flex-col gap-1">
-                    <p className="font-body text-[13px] text-[#555] italic leading-relaxed">"Cazoo Space is the ultimate execution layer. They took our hardware and put it directly into the hands of 10,000 active users."</p>
-                    <p className="font-mono text-[10px] text-[#C8102E] uppercase mt-2">— Enterprise Client</p>
+                  <div className="font-body text-[14px] text-white/90 leading-tight">
+                    Years of combined<br />
+                    industry experience
                   </div>
                 </div>
 

@@ -4,8 +4,6 @@ import PalantirHero from "@/components/sections/PalantirHero";
 
 import SectionChemistry from "@/components/sections/SectionChemistry";
 import PalantirServices from "@/components/sections/PalantirServices";
-import SectionBookBriefing from "@/components/sections/SectionBookBriefing";
-import PalantirCallout from "@/components/sections/PalantirCallout";
 import PalantirVerticals from "@/components/sections/PalantirVerticals";
 import PalantirCTA from "@/components/sections/PalantirCTA";
 import SectionFAQ from "@/components/sections/SectionFAQ";
@@ -67,17 +65,13 @@ export default function HomePage() {
         <div className="section-lazy">
           <PalantirServices />
         </div>
-        <div className="section-lazy">
-          <SectionBookBriefing />
-        </div>
+
 
         <div className="section-lazy">
           <PalantirVerticals />
         </div>
 
-        <div className="section-lazy">
-          <PalantirCallout />
-        </div>
+
         <div className="section-lazy">
           <PalantirCTA />
         </div>
